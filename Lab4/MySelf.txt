@@ -1,0 +1,30 @@
+MySelf
+
+Name: Sanju
+Role: BTech Engineering Student
+Career Goal: Quantitative Researcher
+
+About Me:
+I am a BTech Engineering student interested in quantitative research, mathematics, programming, and problem solving. I want to build a strong technical foundation and prepare myself for a career in quantitative research.
+
+My Current Focus:
+- Competitive Programming
+- C++ and Data Structures & Algorithms
+- Probability and Statistics
+- Mathematics for Quantitative Research
+- Python
+- Financial Markets and Quantitative Finance
+- Time Series Analysis
+- Machine Learning and AI
+
+My Approach:
+I prefer learning concepts from first principles instead of memorizing them. I want to understand how and why things work, practice them through problems and projects, and gradually build the depth required for quant research.
+
+My Projects & Interests:
+I am interested in building practical C++/DSA projects that solve real-world problems. I also explore AI/ML projects, hackathons, financial-market analysis, and software development.
+
+My Long-Term Goal:
+My primary career goal is to become a Quantitative Researcher. I want to develop strong mathematical, statistical, programming, and analytical skills and eventually work on quantitative models and strategies in financial markets.
+
+Education:
+BTech Engineering
