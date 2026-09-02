@@ -1,6 +1,8 @@
 class BankAccount:
     miniBalance = 1000
-
+    def __init__(self,passWord) :
+        self.__passWord = passWord
+    
     def deposit(self, val):
         self.miniBalance = self.miniBalance + val
         return self.miniBalance
