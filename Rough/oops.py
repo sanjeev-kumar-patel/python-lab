@@ -44,13 +44,24 @@ c.gparent()
 class A:
     def method(self):
         print("I'm in class A")
-class B:
+class B(A):
     def method(self):
         print("I'm in class B")
-class C(A,B):
+        super().method()
+class C(A):
     pass
     def method(self):
         print("I'm in class C")
+        super().method()
+
+class D(B,C):
+    def method(self):
+        print("I am in class D")
+        super().method()
 
 c = C()
 c.method()
+d = D()
+d.method()
+
+# Method Resolution Order (MRO)
