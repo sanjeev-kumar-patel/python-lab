@@ -70,3 +70,14 @@ r = re.findall(r'ag+',text)
 print(r)
 r = re.findall(r'ab*',text)
 print(r)
+r = re.findall(r'[a-z]',text)
+print(r)
+r = re.findall(r'[A-Z]',text)
+print(r)
+r = re.findall(r'[A-z]',text)
+print(r)
+
+
+number = "2312312321 2131 3213213212 4353656767 432 321 432 43234323"
+r = re.findall(r'\d{10}',number)
+print(r)
