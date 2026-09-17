@@ -45,4 +45,28 @@ text = "Python is fun. We are learning Python"
 # \s   whitespaces
 # \S  no white spaces
    
-
+text = "My age is 123, my r_no is 23"
+r = re.findall(r'\d',text)
+print(r)
+r = re.findall(r'\d+',text)
+print(r)
+r = re.findall(r'\d{2,3}+',text)
+print(r)
+r = re.findall(r'\D',text)
+print(r)
+r = re.findall(r'\w+',text)
+print(r)
+r = re.findall(r'\W+',text)
+print(r)
+r = re.findall(r'\w',text)
+print(r)
+r = re.findall(r'a.b',text)
+print(r)
+r = re.findall(r'a.e',text)
+print(r)
+r = re.findall(r'm+',text)
+print(r)
+r = re.findall(r'ag+',text)
+print(r)
+r = re.findall(r'ab*',text)
+print(r)
