@@ -78,6 +78,6 @@ r = re.findall(r'[A-z]',text)
 print(r)
 
 
-number = "2312312321 2131 3213213212 4353656767 432 321 432 43234323"
+number = "2312312321 2131 3213213212 4353656767 432 321 432 43234323 dfas fdjasljfad ljfdlajf ldskajf ajkfjal falfj alk"
 r = re.findall(r'\d{10}',number)
 print(r)
