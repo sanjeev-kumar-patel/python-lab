@@ -81,3 +81,57 @@ print(r)
 number = "2312312321 2131 3213213212 4353656767 432 321 432 43234323 dfas fdjasljfad ljfdlajf ldskajf ajkfjal falfj alk"
 r = re.findall(r'\d{10}',number)
 print(r)
+
+text = "7882345123"
+x = re.search(r"(\d{3})(\d{4})(\d{3})",text)
+
+if x:
+    print(x.group(1))
+    print(x.group(2))
+    print(x.group(3))
+    
+text = "9906805337"
+x = re.search(r"(\d{6})(\d{4})",text)
+if x:
+    print(x.group(1))
+    print(x.group(2))
+
+## Validation
+p_no = input("Enter phone number: ")
+pattern=r"^[6-9]\d{9}$"
+if re.fullmatch(pattern,p_no):
+    print("Valid No.")
+else:
+    print("Invalid")
+
+## Validation of Email Id
+
+email = input("Enter the email: ").strip()
+
+pattern = r"[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.(com|in)$"
+
+if re.fullmatch(pattern, email):
+    print("Valid")
+else:
+    print("Invalid")
+    
+## Password validate atleast 8 characters, one upppercase, one lowercase
+
+
+pwd = input("Enter Password: ")
+
+pattern = r"^(?=.*[A-Z])(?=.*[a-z])(?=.*\d).{8,}$"
+
+if re.fullmatch(pattern, pwd):
+    print("Strong")
+else:
+    print("Weak")
+    
+if (len(pwd) >= 8 and re.search(r"[A-Z]",pwd) and re.search(r"[a-z]",pwd) and re.search(r"[0-9]",pwd)):
+    print("Valid")
+else:
+    print("Invalid")
+    
+
+    
+
