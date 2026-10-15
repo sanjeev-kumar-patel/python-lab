@@ -18,6 +18,7 @@ CREATE TABLE Departments (
 cur.executemany("insert into Students values (?,?,?)",
                 [(1,"Sanjeev",22),(2,"Mohan",86),
                 (3,"Rohan",87),(4,"Ram",None)])
+
 cur.executemany("INSERT INTO Departments VALUES (?, ?)", [
     (22, "CSE"), (86, "ECE"), (88, "Mechanical")
 ])

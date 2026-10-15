@@ -9,7 +9,7 @@ import requests
 
 url = "https://jsonplaceholder.typicode.com/users"
 
-# GET - Search user by username
+# Using GET Method Search user by username
 username = input("Username: ")
 users = requests.get(url).json()
 
