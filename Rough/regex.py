@@ -132,6 +132,3 @@ if (len(pwd) >= 8 and re.search(r"[A-Z]",pwd) and re.search(r"[a-z]",pwd) and re
 else:
     print("Invalid")
     
-
-    
-

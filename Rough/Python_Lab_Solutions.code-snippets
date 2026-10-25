@@ -1,0 +1,1432 @@
+{
+    "Q01 Restaurant Billing System": {
+        "prefix": "q01-billing",
+        "body": [
+            "menu = {\"Burger\": 120, \"Pizza\": 250, \"Sandwich\": 100, \"Coffee\": 60}",
+            "name = input(\"Customer name: \")",
+            "total = 0",
+            "print(\"Menu:\", menu)",
+            "while True:",
+            "    item = input(\"Enter item (done to finish): \").title()",
+            "    if item.lower() == \"done\":",
+            "        break",
+            "    if item not in menu:",
+            "        print(\"Item not available\")",
+            "        continue",
+            "    qty = int(input(\"Quantity: \"))",
+            "    total += menu[item] * qty",
+            "print(f\"Customer: {name}\")",
+            "print(f\"Total bill: ₹{total}\")"
+        ],
+        "description": "Calculate a restaurant bill from menu items and quantities."
+    },
+    "Q02 Grade Calculator": {
+        "prefix": "q02-grade",
+        "body": [
+            "marks = float(input(\"Enter marks out of 100: \"))",
+            "if marks >= 90:",
+            "    grade = \"A+\"",
+            "elif marks >= 80:",
+            "    grade = \"A\"",
+            "elif marks >= 70:",
+            "    grade = \"B+\"",
+            "elif marks >= 60:",
+            "    grade = \"B\"",
+            "elif marks >= 50:",
+            "    grade = \"C+\"",
+            "elif marks >= 40:",
+            "    grade = \"C\"",
+            "else:",
+            "    grade = \"Fail\"",
+            "print(\"Grade:\", grade)"
+        ],
+        "description": "Assign a grade based on marks."
+    },
+    "Q03 Bitwise Operators": {
+        "prefix": "q03-bitwise",
+        "body": [
+            "a = int(input(\"Enter first integer: \"))",
+            "b = int(input(\"Enter second integer: \"))",
+            "print(\"AND:\", a & b)",
+            "print(\"OR:\", a | b)",
+            "print(\"XOR:\", a ^ b)",
+            "print(\"NOT a:\", ~a)",
+            "print(\"Left shift a:\", a << 1)",
+            "print(\"Right shift a:\", a >> 1)"
+        ],
+        "description": "Demonstrate bitwise operators."
+    },
+    "Q04 BMI Calculator": {
+        "prefix": "q04-bmi",
+        "body": [
+            "weight = float(input(\"Weight in kg: \"))",
+            "height = float(input(\"Height in metres: \"))",
+            "if height <= 0 or weight <= 0:",
+            "    print(\"Weight and height must be positive.\")",
+            "else:",
+            "    bmi = weight / (height ** 2)",
+            "    print(f\"BMI: {bmi:.2f}\")"
+        ],
+        "description": "Calculate BMI from weight and height."
+    },
+    "Q05 Calculator": {
+        "prefix": "q05-calculator",
+        "body": [
+            "a = float(input(\"First number: \"))",
+            "op = input(\"Operator (+, -, *, /): \")",
+            "b = float(input(\"Second number: \"))",
+            "if op == \"+\":",
+            "    result = a + b",
+            "elif op == \"-\":",
+            "    result = a - b",
+            "elif op == \"*\":",
+            "    result = a * b",
+            "elif op == \"/\" and b != 0:",
+            "    result = a / b",
+            "elif op == \"/\":",
+            "    result = \"Cannot divide by zero\"",
+            "else:",
+            "    result = \"Invalid operator\"",
+            "print(\"Result:\", result)"
+        ],
+        "description": "Perform basic arithmetic with validation."
+    },
+    "Q06 Division with Exception Handling": {
+        "prefix": "q06-division",
+        "body": [
+            "try:",
+            "    numerator = float(input(\"Numerator: \"))",
+            "    denominator = float(input(\"Denominator: \"))",
+            "    print(\"Result:\", numerator / denominator)",
+            "except ZeroDivisionError:",
+            "    print(\"Error: denominator cannot be zero.\")",
+            "except ValueError:",
+            "    print(\"Please enter valid numbers.\")"
+        ],
+        "description": "Divide two numbers and handle errors."
+    },
+    "Q07 Factorial Using Loop": {
+        "prefix": "q07-factorial-loop",
+        "body": [
+            "n = int(input(\"Enter a non-negative integer: \"))",
+            "if n < 0:",
+            "    print(\"Factorial is not defined for negative integers.\")",
+            "else:",
+            "    result = 1",
+            "    for i in range(2, n + 1):",
+            "        result *= i",
+            "    print(f\"{n}! = {result}\")"
+        ],
+        "description": "Calculate factorial using a loop."
+    },
+    "Q08 Multiplication Table For Loop": {
+        "prefix": "q08-table-for",
+        "body": [
+            "n = int(input(\"Enter a number: \"))",
+            "limit = int(input(\"Enter limit: \"))",
+            "for i in range(1, limit + 1):",
+            "    print(f\"{n} x {i} = {n * i}\")"
+        ],
+        "description": "Print a multiplication table using for."
+    },
+    "Q09 Multiplication Table While Loop": {
+        "prefix": "q09-table-while",
+        "body": [
+            "n = int(input(\"Enter a number: \"))",
+            "limit = int(input(\"Enter limit: \"))",
+            "i = 1",
+            "while i <= limit:",
+            "    print(f\"{n} x {i} = {n * i}\")",
+            "    i += 1"
+        ],
+        "description": "Print a multiplication table using while."
+    },
+    "Q10 Star Pattern": {
+        "prefix": "q10-star-pattern",
+        "body": [
+            "rows = int(input(\"Number of rows: \"))",
+            "for i in range(1, rows + 1):",
+            "    print(\"*\" * i)"
+        ],
+        "description": "Print a right-angled star pattern."
+    },
+    "Q11 Simple Interest": {
+        "prefix": "q11-simple-interest",
+        "body": [
+            "p = float(input(\"Principal: \"))",
+            "r = float(input(\"Annual rate (%): \"))",
+            "t = float(input(\"Time (years): \"))",
+            "si = p * r * t / 100",
+            "print(f\"Simple interest: {si:.2f}\")",
+            "print(f\"Total amount: {p + si:.2f}\")"
+        ],
+        "description": "Calculate simple interest."
+    },
+    "Q12 Swap With Temporary Variable": {
+        "prefix": "q12-swap-temp",
+        "body": [
+            "a = input(\"First value: \")",
+            "b = input(\"Second value: \")",
+            "temp = a",
+            "a = b",
+            "b = temp",
+            "print(\"After swapping:\", a, b)"
+        ],
+        "description": "Swap two values using a temporary variable."
+    },
+    "Q13 Swap Without Temporary Variable": {
+        "prefix": "q13-swap-no-temp",
+        "body": [
+            "a = input(\"First value: \")",
+            "b = input(\"Second value: \")",
+            "a, b = b, a",
+            "print(\"After swapping:\", a, b)"
+        ],
+        "description": "Swap two values without a temporary variable."
+    },
+    "Q14 Days to Years and Weeks": {
+        "prefix": "q14-days-years-weeks",
+        "body": [
+            "days = int(input(\"Enter number of days: \"))",
+            "years = days // 365",
+            "remaining = days % 365",
+            "weeks = remaining // 7",
+            "extra_days = remaining % 7",
+            "print(\"Years:\", years)",
+            "print(\"Weeks:\", weeks)",
+            "print(\"Remaining days:\", extra_days)"
+        ],
+        "description": "Convert days into years, weeks, and remaining days."
+    },
+    "Q15 Largest of Three Numbers": {
+        "prefix": "q15-largest-three",
+        "body": [
+            "a = float(input(\"First number: \"))",
+            "b = float(input(\"Second number: \"))",
+            "c = float(input(\"Third number: \"))",
+            "print(\"Largest:\", max(a, b, c))"
+        ],
+        "description": "Find the largest of three numbers."
+    },
+    "Q16 User-Defined Module": {
+        "prefix": "q16-module",
+        "body": [
+            "# Save this function in mymodule.py:",
+            "def square(n):",
+            "    return n * n",
+            "",
+            "# In another Python file:",
+            "import mymodule",
+            "print(mymodule.square(5))",
+            "# Run the second file from the same directory."
+        ],
+        "description": "Demonstrate importing a user-defined module."
+    },
+    "Q17 Set Operations": {
+        "prefix": "q17-set-operations",
+        "body": [
+            "values = {5, 2, 8, 2, 4}",
+            "print(\"Set:\", values)",
+            "print(\"Minimum:\", min(values))",
+            "print(\"Maximum:\", max(values))",
+            "values.add(10)",
+            "values.discard(2)",
+            "print(\"Updated set:\", values)",
+            "for value in values:",
+            "    print(value)"
+        ],
+        "description": "Demonstrate common set operations."
+    },
+    "Q18 Prime Numbers Using filter": {
+        "prefix": "q18-filter-primes",
+        "body": [
+            "def is_prime(n):",
+            "    if n < 2:",
+            "        return False",
+            "    for i in range(2, int(n ** 0.5) + 1):",
+            "        if n % i == 0:",
+            "            return False",
+            "    return True",
+            "primes = list(filter(is_prime, range(1, 101)))",
+            "print(primes)"
+        ],
+        "description": "Filter prime numbers from 1 to 100."
+    },
+    "Q19 Cubes Using Lambda and Map": {
+        "prefix": "q19-cubes-map",
+        "body": [
+            "numbers = list(range(1, 11))",
+            "cubes = list(map(lambda x: x ** 3, numbers))",
+            "print(\"Numbers:\", numbers)",
+            "print(\"Cubes:\", cubes)"
+        ],
+        "description": "Calculate cubes using lambda and map."
+    },
+    "Q20 Prices Greater Than 500": {
+        "prefix": "q20-price-filter",
+        "body": [
+            "prices = [150, 650, 320, 900, 500, 750]",
+            "result = list(filter(lambda price: price > 500, prices))",
+            "print(result)"
+        ],
+        "description": "Filter prices greater than 500."
+    },
+    "Q21 Student Dictionary": {
+        "prefix": "q21-student-dictionary",
+        "body": [
+            "students = {1: 85, 2: 90, 3: 78}",
+            "print(\"Keys:\", list(students.keys()))",
+            "print(\"Values:\", list(students.values()))",
+            "students[4] = 88",
+            "students[2] = 94",
+            "print(\"Updated dictionary:\", students)"
+        ],
+        "description": "Add and update student marks in a dictionary."
+    },
+    "Q22 Modify Lists Inside Tuple": {
+        "prefix": "q22-tuple-lists",
+        "body": [
+            "data = ([1, 2, 3], [\"Aman\", \"Riya\"])",
+            "data[0].append(4)",
+            "data[1].remove(\"Aman\")",
+            "data[1][0] = \"Neha\"",
+            "print(data)",
+            "# The tuple itself is immutable, but its contained lists are mutable."
+        ],
+        "description": "Demonstrate mutable lists inside an immutable tuple."
+    },
+    "Q23 Nested Loops and Continue": {
+        "prefix": "q23-nested-continue",
+        "body": [
+            "adjectives = [\"red\", \"sweet\", \"fresh\"]",
+            "fruits = [\"apple\", \"banana\", \"orange\"]",
+            "for adjective in adjectives:",
+            "    for fruit in fruits:",
+            "        if adjective == \"sweet\" and fruit == \"apple\":",
+            "            continue",
+            "        print(adjective, fruit)"
+        ],
+        "description": "Use nested loops and continue."
+    },
+    "Q24 Factorial Using Recursion": {
+        "prefix": "q24-factorial-recursion",
+        "body": [
+            "def factorial(n):",
+            "    if n < 0:",
+            "        raise ValueError(\"n must be non-negative\")",
+            "    if n <= 1:",
+            "        return 1",
+            "    return n * factorial(n - 1)",
+            "",
+            "n = int(input(\"Enter a non-negative integer: \"))",
+            "print(factorial(n))"
+        ],
+        "description": "Calculate factorial recursively."
+    },
+    "Q25 Sum of Even and Odd Numbers": {
+        "prefix": "q25-even-odd-sums",
+        "body": [
+            "def sum_even_odd(start, end):",
+            "    even_sum = sum(n for n in range(start, end + 1) if n % 2 == 0)",
+            "    odd_sum = sum(n for n in range(start, end + 1) if n % 2 != 0)",
+            "    return even_sum, odd_sum",
+            "",
+            "start = int(input(\"Start: \"))",
+            "end = int(input(\"End: \"))",
+            "even_sum, odd_sum = sum_even_odd(start, end)",
+            "print(\"Even sum:\", even_sum)",
+            "print(\"Odd sum:\", odd_sum)"
+        ],
+        "description": "Calculate even and odd sums in a range."
+    },
+    "Q26 Binary to Decimal": {
+        "prefix": "q26-binary-decimal",
+        "body": [
+            "binary = input(\"Enter a binary number: \")",
+            "if binary and all(ch in \"01\" for ch in binary):",
+            "    print(\"Decimal:\", int(binary, 2))",
+            "else:",
+            "    print(\"Invalid binary number\")"
+        ],
+        "description": "Convert binary input to decimal."
+    },
+    "Q27 Decimal Float to Binary": {
+        "prefix": "q27-float-binary",
+        "body": [
+            "def float_to_binary(value, places=10):",
+            "    whole = int(value)",
+            "    fraction = value - whole",
+            "    whole_bits = bin(whole)[2:]",
+            "    bits = []",
+            "    for _ in range(places):",
+            "        fraction *= 2",
+            "        bit = int(fraction)",
+            "        bits.append(str(bit))",
+            "        fraction -= bit",
+            "    return whole_bits + \".\" + \"\".join(bits)",
+            "",
+            "value = float(input(\"Enter a non-negative number: \"))",
+            "if value < 0:",
+            "    print(\"Please enter a non-negative number.\")",
+            "else:",
+            "    print(float_to_binary(value))"
+        ],
+        "description": "Convert a non-negative floating-point number to binary."
+    },
+    "Q28 File Handling Basics": {
+        "prefix": "q28-file-handling",
+        "body": [
+            "with open(\"example.txt\", \"w\", encoding=\"utf-8\") as file:",
+            "    file.write(\"Hello, Python!\\n\")",
+            "",
+            "with open(\"example.txt\", \"a\", encoding=\"utf-8\") as file:",
+            "    file.write(\"This line was appended.\\n\")",
+            "",
+            "with open(\"example.txt\", \"r\", encoding=\"utf-8\") as file:",
+            "    print(file.read())"
+        ],
+        "description": "Write, append, and read a text file."
+    },
+    "Q29 Price After Discount": {
+        "prefix": "q29-discount",
+        "body": [
+            "def calculate_price(price, discount=10):",
+            "    if price < 0 or not 0 <= discount <= 100:",
+            "        raise ValueError(\"Invalid price or discount\")",
+            "    return price * (1 - discount / 100)",
+            "",
+            "price = float(input(\"Original price: \"))",
+            "discount_text = input(\"Discount percentage (Enter for 10%): \")",
+            "discount = float(discount_text) if discount_text else 10",
+            "print(f\"Final price: {calculate_price(price, discount):.2f}\")"
+        ],
+        "description": "Calculate a price after discount."
+    },
+    "Q30 Library Book List": {
+        "prefix": "q30-library-list",
+        "body": [
+            "books = [\"The Alchemist\", \"1984\", \"The Kite Runner\", \"Pride and Prejudice\"]",
+            "books.extend([\"The Hobbit\", \"Animal Farm\"])",
+            "books.remove(\"1984\")",
+            "books.sort()",
+            "print(\"Library books:\")",
+            "for book in books:",
+            "    print(book)"
+        ],
+        "description": "Add, remove, sort, and display library books."
+    },
+    "Q31 Borrower Details Tuple": {
+        "prefix": "q31-borrower-tuple",
+        "body": [
+            "borrower = (\"Aman\", \"LIB102\", \"2026-10-25\")",
+            "print(\"Borrower details:\")",
+            "for item in borrower:",
+            "    print(item)",
+            "print(\"Tuple length:\", len(borrower))",
+            "try:",
+            "    borrower[0] = \"Riya\"",
+            "except TypeError as error:",
+            "    print(\"Tuples are immutable:\", error)"
+        ],
+        "description": "Store immutable borrower details in a tuple."
+    },
+    "Q32 Tuple Packing and Unpacking": {
+        "prefix": "q32-tuple-pack-unpack",
+        "body": [
+            "book_info = (\"The Alchemist\", \"Paulo Coelho\", 1988)",
+            "title, author, year = book_info",
+            "print(\"Title:\", title)",
+            "print(\"Author:\", author)",
+            "print(\"Publication year:\", year)"
+        ],
+        "description": "Demonstrate tuple packing and unpacking."
+    },
+    "Q33 List Indexing and Slicing": {
+        "prefix": "q33-list-slicing",
+        "body": [
+            "weekly_borrowing = [12, 15, 18, 10, 22, 16, 20]",
+            "week2_to_week5 = weekly_borrowing[1:5]",
+            "weekly_borrowing[0] = 20",
+            "print(\"Updated list:\", weekly_borrowing)",
+            "print(\"Weeks 2 to 5:\", week2_to_week5)"
+        ],
+        "description": "Use list indexing and slicing."
+    },
+    "Q34 File Methods": {
+        "prefix": "q34-file-methods",
+        "body": [
+            "lines = [\"First line\\n\", \"Second line\\n\", \"Third line\\n\"]",
+            "with open(\"sample.txt\", \"w\", encoding=\"utf-8\") as file:",
+            "    file.writelines(lines)",
+            "",
+            "with open(\"sample.txt\", \"r\", encoding=\"utf-8\") as file:",
+            "    print(\"readline:\", file.readline().strip())",
+            "    print(\"readlines:\", file.readlines())",
+            "",
+            "with open(\"sample.txt\", \"r\", encoding=\"utf-8\") as file:",
+            "    file.seek(0)",
+            "    print(\"read:\", file.read())",
+            "",
+            "with open(\"sample.txt\", \"a\", encoding=\"utf-8\") as file:",
+            "    file.write(\"Appended line\\n\")"
+        ],
+        "description": "Demonstrate common text-file methods."
+    },
+    "Q35 Exception Handling": {
+        "prefix": "q35-exceptions",
+        "body": [
+            "try:",
+            "    numerator = int(input(\"Numerator: \"))",
+            "    denominator = int(input(\"Denominator: \"))",
+            "    result = numerator / denominator",
+            "except ValueError:",
+            "    print(\"Enter integers only.\")",
+            "except ZeroDivisionError:",
+            "    print(\"Cannot divide by zero.\")",
+            "else:",
+            "    print(\"Result:\", result)",
+            "finally:",
+            "    print(\"Execution finished.\")"
+        ],
+        "description": "Demonstrate try, except, else, and finally."
+    },
+    "Q36 Stack Operations": {
+        "prefix": "q36-stack",
+        "body": [
+            "class Stack:",
+            "    def __init__(self):",
+            "        self.items = []",
+            "    def push(self, item):",
+            "        self.items.append(item)",
+            "    def pop(self):",
+            "        return self.items.pop() if self.items else None",
+            "    def peek(self):",
+            "        return self.items[-1] if self.items else None",
+            "    def size(self):",
+            "        return len(self.items)",
+            "    def empty(self):",
+            "        return len(self.items) == 0",
+            "",
+            "stack = Stack()",
+            "stack.push(10)",
+            "stack.push(20)",
+            "print(\"Top:\", stack.peek())",
+            "print(\"Popped:\", stack.pop())",
+            "print(\"Size:\", stack.size())",
+            "print(\"Empty:\", stack.empty())"
+        ],
+        "description": "Implement stack operations."
+    },
+    "Q37 Bubble Sort": {
+        "prefix": "q37-bubble-sort",
+        "body": [
+            "arr = [64, 34, 25, 12, 22, 11, 90]",
+            "for i in range(len(arr)):",
+            "    for j in range(0, len(arr) - i - 1):",
+            "        if arr[j] > arr[j + 1]:",
+            "            arr[j], arr[j + 1] = arr[j + 1], arr[j]",
+            "print(\"Sorted:\", arr)"
+        ],
+        "description": "Sort a list using Bubble Sort."
+    },
+    "Q38 Selection Sort": {
+        "prefix": "q38-selection-sort",
+        "body": [
+            "arr = [64, 25, 12, 22, 11]",
+            "for i in range(len(arr)):",
+            "    min_index = i",
+            "    for j in range(i + 1, len(arr)):",
+            "        if arr[j] < arr[min_index]:",
+            "            min_index = j",
+            "    arr[i], arr[min_index] = arr[min_index], arr[i]",
+            "print(\"Sorted:\", arr)"
+        ],
+        "description": "Sort a list using Selection Sort."
+    },
+    "Q39 Insertion Sort": {
+        "prefix": "q39-insertion-sort",
+        "body": [
+            "arr = [12, 11, 13, 5, 6]",
+            "for i in range(1, len(arr)):",
+            "    key = arr[i]",
+            "    j = i - 1",
+            "    while j >= 0 and arr[j] > key:",
+            "        arr[j + 1] = arr[j]",
+            "        j -= 1",
+            "    arr[j + 1] = key",
+            "print(\"Sorted:\", arr)"
+        ],
+        "description": "Sort a list using Insertion Sort."
+    },
+    "Q40 Heap Sort": {
+        "prefix": "q40-heap-sort",
+        "body": [
+            "def heapify(arr, n, i):",
+            "    largest = i",
+            "    left, right = 2 * i + 1, 2 * i + 2",
+            "    if left < n and arr[left] > arr[largest]:",
+            "        largest = left",
+            "    if right < n and arr[right] > arr[largest]:",
+            "        largest = right",
+            "    if largest != i:",
+            "        arr[i], arr[largest] = arr[largest], arr[i]",
+            "        heapify(arr, n, largest)",
+            "",
+            "def heap_sort(arr):",
+            "    n = len(arr)",
+            "    for i in range(n // 2 - 1, -1, -1):",
+            "        heapify(arr, n, i)",
+            "    for i in range(n - 1, 0, -1):",
+            "        arr[0], arr[i] = arr[i], arr[0]",
+            "        heapify(arr, i, 0)",
+            "    return arr",
+            "",
+            "print(heap_sort([12, 11, 13, 5, 6, 7]))"
+        ],
+        "description": "Sort a list using Heap Sort."
+    },
+    "Q41 Merge Sort": {
+        "prefix": "q41-merge-sort",
+        "body": [
+            "def merge_sort(arr):",
+            "    if len(arr) <= 1:",
+            "        return arr",
+            "    mid = len(arr) // 2",
+            "    left = merge_sort(arr[:mid])",
+            "    right = merge_sort(arr[mid:])",
+            "    result, i, j = [], 0, 0",
+            "    while i < len(left) and j < len(right):",
+            "        if left[i] <= right[j]:",
+            "            result.append(left[i]); i += 1",
+            "        else:",
+            "            result.append(right[j]); j += 1",
+            "    return result + left[i:] + right[j:]",
+            "",
+            "print(merge_sort([38, 27, 43, 3, 9, 82, 10]))"
+        ],
+        "description": "Sort a list using Merge Sort."
+    },
+    "Q42 Quick Sort": {
+        "prefix": "q42-quick-sort",
+        "body": [
+            "def quick_sort(arr):",
+            "    if len(arr) <= 1:",
+            "        return arr",
+            "    pivot = arr[len(arr) // 2]",
+            "    left = [x for x in arr if x < pivot]",
+            "    middle = [x for x in arr if x == pivot]",
+            "    right = [x for x in arr if x > pivot]",
+            "    return quick_sort(left) + middle + quick_sort(right)",
+            "",
+            "print(quick_sort([10, 7, 8, 9, 1, 5]))"
+        ],
+        "description": "Sort a list using Quick Sort."
+    },
+    "Q43 Point Operator Overloading": {
+        "prefix": "q43-point-add",
+        "body": [
+            "class Point:",
+            "    def __init__(self, x, y):",
+            "        self.x, self.y = x, y",
+            "    def __add__(self, other):",
+            "        return Point(self.x + other.x, self.y + other.y)",
+            "    def __repr__(self):",
+            "        return f\"Point({self.x}, {self.y})\"",
+            "",
+            "p1 = Point(2, 3)",
+            "p2 = Point(4, 5)",
+            "print(p1 + p2)"
+        ],
+        "description": "Overload + to add two points."
+    },
+    "Q44 Fraction Addition": {
+        "prefix": "q44-fraction-add",
+        "body": [
+            "from fractions import Fraction",
+            "",
+            "f1 = Fraction(1, 4)",
+            "f2 = Fraction(1, 6)",
+            "print(\"Sum:\", f1 + f2)"
+        ],
+        "description": "Add and simplify two fractions."
+    },
+    "Q45 Basic Regular Expressions": {
+        "prefix": "q45-regex-basics",
+        "body": [
+            "import re",
+            "",
+            "text = \"Contact aman@example.com or call 123-456\"",
+            "print(\"search:\", re.search(r\"\\d+\", text).group())",
+            "print(\"match:\", re.match(r\"Contact\", text).group())",
+            "print(\"split:\", re.split(r\"\\s+\", text))",
+            "print(\"findall:\", re.findall(r\"[\\w.-]+@[\\w.-]+\", text))"
+        ],
+        "description": "Demonstrate search, match, split, and findall."
+    },
+    "Q46 Regex Validation": {
+        "prefix": "q46-regex-validation",
+        "body": [
+            "import re",
+            "",
+            "mobile = input(\"Mobile number: \")",
+            "landline = input(\"Landline number: \")",
+            "email = input(\"Email: \")",
+            "password = input(\"Password: \")",
+            "",
+            "print(\"Mobile valid:\", bool(re.fullmatch(r\"[6-9]\\d{9}\", mobile)))",
+            "print(\"Landline valid:\", bool(re.fullmatch(r\"0?\\d{2,4}[- ]?\\d{6,8}\", landline)))",
+            "print(\"Email valid:\", bool(re.fullmatch(r\"[\\w.+-]+@[\\w-]+(?:\\.[\\w-]+)+\", email)))",
+            "strong = (len(password) >= 8 and re.search(r\"[A-Z]\", password)",
+            "          and re.search(r\"[a-z]\", password) and re.search(r\"\\d\", password)",
+            "          and re.search(r\"[^A-Za-z0-9]\", password))",
+            "print(\"Strong password:\", bool(strong))"
+        ],
+        "description": "Validate mobile, landline, email, and password formats."
+    },
+    "Q47 Diamond Problem": {
+        "prefix": "q47-diamond-inheritance",
+        "body": [
+            "class Person:",
+            "    def show(self):",
+            "        print(\"Person\")",
+            "",
+            "class Mother(Person):",
+            "    def show(self):",
+            "        print(\"Mother\")",
+            "        super().show()",
+            "",
+            "class Father(Person):",
+            "    def show(self):",
+            "        print(\"Father\")",
+            "        super().show()",
+            "",
+            "class Child(Mother, Father):",
+            "    pass",
+            "",
+            "Child().show()",
+            "print(\"MRO:\", [cls.__name__ for cls in Child.mro()])"
+        ],
+        "description": "Demonstrate the diamond inheritance pattern and MRO."
+    },
+    "Q48 HTTPS Retrieve Users to SQLite": {
+        "prefix": "q48-https-sqlite",
+        "body": [
+            "import sqlite3",
+            "import requests",
+            "",
+            "url = \"https://jsonplaceholder.typicode.com/users\"",
+            "response = requests.get(url, timeout=15)",
+            "response.raise_for_status()",
+            "users = response.json()",
+            "",
+            "with sqlite3.connect(\"users.db\") as conn:",
+            "    conn.execute(\"\"\"CREATE TABLE IF NOT EXISTS users (",
+            "        id INTEGER PRIMARY KEY, name TEXT, username TEXT, email TEXT",
+            "    )\"\"\")",
+            "    conn.executemany(",
+            "        \"INSERT OR REPLACE INTO users (id, name, username, email) VALUES (?, ?, ?, ?)\",",
+            "        [(u[\"id\"], u[\"name\"], u[\"username\"], u[\"email\"]) for u in users]",
+            "    )",
+            "    for row in conn.execute(\"SELECT id, name, username, email FROM users\"):",
+            "        print(row)"
+        ],
+        "description": "Fetch users over HTTPS, store them in SQLite, and display them."
+    },
+    "Q49 JSONPlaceholder CRUD": {
+        "prefix": "q49-jsonplaceholder-crud",
+        "body": [
+            "import requests",
+            "",
+            "base = \"https://jsonplaceholder.typicode.com/users\"",
+            "response = requests.get(base, timeout=15)",
+            "response.raise_for_status()",
+            "users = response.json()",
+            "match = next((u for u in users if u[\"username\"] == \"Bret\"), None)",
+            "if match:",
+            "    print(\"User:\", match[\"name\"], match[\"email\"])",
+            "",
+            "created = requests.post(base, json={\"name\": \"Aman\", \"username\": \"aman\", \"email\": \"aman@example.com\"}, timeout=15)",
+            "print(\"POST:\", created.status_code, created.json())",
+            "",
+            "updated = requests.put(f\"{base}/1\", json={\"id\": 1, \"name\": \"Updated User\", \"username\": \"Bret\", \"email\": \"new@example.com\"}, timeout=15)",
+            "print(\"PUT:\", updated.status_code, updated.json())",
+            "",
+            "deleted = requests.delete(f\"{base}/1\", timeout=15)",
+            "print(\"DELETE:\", deleted.status_code)"
+        ],
+        "description": "Demonstrate GET, POST, PUT, and DELETE requests."
+    },
+    "Q50 Student Database SQLite": {
+        "prefix": "q50-student-sqlite",
+        "body": [
+            "import sqlite3",
+            "",
+            "students = [",
+            "    (1, \"Aman\", \"CSE\", 90),",
+            "    (2, \"Riya\", \"ECE\", 86),",
+            "    (3, \"Rahul\", \"CSE\", 78),",
+            "    (4, \"Neha\", \"ME\", 92),",
+            "    (5, \"Mohan\", \"CSE\", 88)",
+            "]",
+            "with sqlite3.connect(\"students.db\") as conn:",
+            "    conn.execute(\"\"\"CREATE TABLE IF NOT EXISTS students (",
+            "        id INTEGER PRIMARY KEY, name TEXT, branch TEXT, marks INTEGER",
+            "    )\"\"\")",
+            "    conn.executemany(\"INSERT OR REPLACE INTO students VALUES (?, ?, ?, ?)\", students)",
+            "    print(\"All:\", conn.execute(\"SELECT * FROM students\").fetchall())",
+            "    print(\"CSE:\", conn.execute(\"SELECT * FROM students WHERE branch = ?\", (\"CSE\",)).fetchall())",
+            "    print(\"Marks > 85:\", conn.execute(\"SELECT * FROM students WHERE marks > 85\").fetchall())",
+            "    conn.execute(\"UPDATE students SET marks = ? WHERE id = ?\", (95, 1))",
+            "    conn.execute(\"DELETE FROM students WHERE id = ?\", (4,))",
+            "    print(\"Updated:\", conn.execute(\"SELECT * FROM students\").fetchall())"
+        ],
+        "description": "Insert, query, update, and delete student database records."
+    },
+    "Q51 SQL Joins": {
+        "prefix": "q51-sql-joins",
+        "body": [
+            "import sqlite3",
+            "",
+            "with sqlite3.connect(\":memory:\") as conn:",
+            "    conn.executescript(\"\"\"",
+            "    CREATE TABLE Students(id INTEGER, name TEXT, dept_id INTEGER);",
+            "    CREATE TABLE Departments(dept_id INTEGER, department TEXT);",
+            "    INSERT INTO Students VALUES (1,'Sanjeev',101),(2,'Mohan',102),(3,'Rohan',103),(4,'Ram',104);",
+            "    INSERT INTO Departments VALUES (101,'CSE'),(102,'ECE'),(105,'Mechanical');",
+            "    \"\"\")",
+            "    queries = {",
+            "        \"INNER JOIN\": \"SELECT s.id,s.name,d.department FROM Students s INNER JOIN Departments d ON s.dept_id=d.dept_id\",",
+            "        \"LEFT JOIN\": \"SELECT s.id,s.name,d.department FROM Students s LEFT JOIN Departments d ON s.dept_id=d.dept_id\",",
+            "        \"RIGHT JOIN (portable)\": \"SELECT s.id,s.name,d.department FROM Departments d LEFT JOIN Students s ON s.dept_id=d.dept_id\",",
+            "        \"FULL OUTER JOIN (portable)\": \"SELECT s.id,s.name,d.department FROM Students s LEFT JOIN Departments d ON s.dept_id=d.dept_id UNION SELECT s.id,s.name,d.department FROM Departments d LEFT JOIN Students s ON s.dept_id=d.dept_id\"",
+            "    }",
+            "    for title, query in queries.items():",
+            "        print(\"\\n\" + title)",
+            "        print(conn.execute(query).fetchall())"
+        ],
+        "description": "Demonstrate INNER, LEFT, RIGHT-equivalent, and FULL OUTER joins in SQLite."
+    },
+    "Q52 Matplotlib Single Line": {
+        "prefix": "q52-single-line",
+        "body": [
+            "import matplotlib.pyplot as plt",
+            "",
+            "x = [1, 2, 3, 4, 5]",
+            "y = [10, 20, 15, 25, 30]",
+            "plt.plot(x, y, marker=\"o\")",
+            "plt.title(\"Single Line Graph\")",
+            "plt.xlabel(\"X-axis\")",
+            "plt.ylabel(\"Y-axis\")",
+            "plt.grid(True)",
+            "plt.show()"
+        ],
+        "description": "Plot a single line graph."
+    },
+    "Q53 Matplotlib Double Line": {
+        "prefix": "q53-double-line",
+        "body": [
+            "import matplotlib.pyplot as plt",
+            "",
+            "x = [1, 2, 3, 4, 5]",
+            "y1 = [10, 20, 15, 25, 30]",
+            "y2 = [12, 17, 29, 30, 28]",
+            "plt.plot(x, y1, marker=\"s\", label=\"Line 1\")",
+            "plt.plot(x, y2, marker=\"o\", label=\"Line 2\")",
+            "plt.title(\"Double Line Graph\")",
+            "plt.xlabel(\"X-axis\")",
+            "plt.ylabel(\"Y-axis\")",
+            "plt.legend()",
+            "plt.grid(True)",
+            "plt.show()"
+        ],
+        "description": "Plot two lines on one graph."
+    },
+    "Q54 Single Bar Graph": {
+        "prefix": "q54-single-bar",
+        "body": [
+            "import matplotlib.pyplot as plt",
+            "",
+            "departments = [\"CSE\", \"ECE\", \"ME\", \"Civil\"]",
+            "marks = [80, 70, 60, 75]",
+            "plt.bar(departments, marks)",
+            "plt.title(\"Single Bar Graph\")",
+            "plt.xlabel(\"Departments\")",
+            "plt.ylabel(\"Marks\")",
+            "plt.show()"
+        ],
+        "description": "Plot a bar chart of department marks."
+    },
+    "Q55 Double Bar Graph": {
+        "prefix": "q55-double-bar",
+        "body": [
+            "import matplotlib.pyplot as plt",
+            "import numpy as np",
+            "",
+            "x = np.arange(4)",
+            "boys = [80, 70, 60, 75]",
+            "girls = [75, 85, 65, 80]",
+            "plt.bar(x - 0.2, boys, width=0.4, label=\"Boys\")",
+            "plt.bar(x + 0.2, girls, width=0.4, label=\"Girls\")",
+            "plt.xticks(x, [\"1\", \"2\", \"3\", \"4\"])",
+            "plt.title(\"Double Bar Graph\")",
+            "plt.xlabel(\"Students\")",
+            "plt.ylabel(\"Marks\")",
+            "plt.legend()",
+            "plt.show()"
+        ],
+        "description": "Compare two groups using a double bar chart."
+    },
+    "Q56 Histogram": {
+        "prefix": "q56-histogram",
+        "body": [
+            "import matplotlib.pyplot as plt",
+            "",
+            "data = [10, 20, 20, 30, 30, 30, 40, 40, 50, 60]",
+            "plt.hist(data, bins=5, edgecolor=\"black\")",
+            "plt.title(\"Histogram\")",
+            "plt.xlabel(\"Marks\")",
+            "plt.ylabel(\"Frequency\")",
+            "plt.show()"
+        ],
+        "description": "Draw a histogram."
+    },
+    "Q57 Pie Chart": {
+        "prefix": "q57-pie-chart",
+        "body": [
+            "import matplotlib.pyplot as plt",
+            "",
+            "labels = [\"CSE\", \"ECE\", \"ME\", \"Civil\"]",
+            "sizes = [40, 25, 20, 15]",
+            "plt.pie(sizes, labels=labels, autopct=\"%1.1f%%\")",
+            "plt.title(\"Department Distribution\")",
+            "plt.show()"
+        ],
+        "description": "Draw a labelled pie chart."
+    },
+    "Q58 CSV Create and Read": {
+        "prefix": "q58-csv-read",
+        "body": [
+            "import csv",
+            "",
+            "with open(\"students.csv\", \"w\", newline=\"\", encoding=\"utf-8\") as file:",
+            "    writer = csv.writer(file)",
+            "    writer.writerow([\"Roll_No\", \"Name\", \"Marks\"])",
+            "    writer.writerows([[1, \"Aman\", 85], [2, \"Riya\", 90], [3, \"Rahul\", 78]])",
+            "",
+            "students = []",
+            "with open(\"students.csv\", \"r\", newline=\"\", encoding=\"utf-8\") as file:",
+            "    for row in csv.DictReader(file):",
+            "        students.append(row)",
+            "",
+            "print(\"Student Records:\")",
+            "for student in students:",
+            "    print(student)"
+        ],
+        "description": "Create a CSV file and load its records into a list."
+    },
+    "Q59 CSV Inner Join": {
+        "prefix": "q59-csv-inner-join",
+        "body": [
+            "import csv",
+            "",
+            "students = [",
+            "    {\"Student_ID\": \"1\", \"Name\": \"Aman\", \"Department_ID\": \"101\"},",
+            "    {\"Student_ID\": \"2\", \"Name\": \"Riya\", \"Department_ID\": \"102\"},",
+            "    {\"Student_ID\": \"3\", \"Name\": \"Rahul\", \"Department_ID\": \"101\"},",
+            "    {\"Student_ID\": \"4\", \"Name\": \"Neha\", \"Department_ID\": \"103\"}",
+            "]",
+            "departments = [",
+            "    {\"Department_ID\": \"101\", \"Department_Name\": \"CSE\"},",
+            "    {\"Department_ID\": \"102\", \"Department_Name\": \"ECE\"},",
+            "    {\"Department_ID\": \"104\", \"Department_Name\": \"Mechanical\"}",
+            "]",
+            "department_map = {d[\"Department_ID\"]: d[\"Department_Name\"] for d in departments}",
+            "print(\"Student_ID\\tName\\tDepartment\")",
+            "for student in students:",
+            "    dept = department_map.get(student[\"Department_ID\"])",
+            "    if dept is not None:",
+            "        print(student[\"Student_ID\"], student[\"Name\"], dept, sep=\"\\t\")"
+        ],
+        "description": "Implement an INNER JOIN using Python dictionaries."
+    },
+    "Q60 NumPy Array Operations": {
+        "prefix": "q60-numpy-operations",
+        "body": [
+            "import numpy as np",
+            "",
+            "arr1 = np.array([10, 20, 30, 40, 50])",
+            "arr2 = np.array([[1, 2, 3], [4, 5, 6]])",
+            "print(\"1D Array:\", arr1)",
+            "print(\"2D Array:\\n\", arr2)",
+            "print(\"Shapes:\", arr1.shape, arr2.shape)",
+            "print(\"Reshaped:\\n\", arr1.reshape(5, 1))",
+            "print(\"Iteration:\", end=\" \")",
+            "for value in arr1:",
+            "    print(value, end=\" \")",
+            "arr3 = np.array([60, 70, 80])",
+            "joined = np.concatenate((arr1, arr3))",
+            "print(\"\\nJoined:\", joined)",
+            "print(\"Split:\", np.array_split(joined, 3))",
+            "print(\"Filtered:\", arr1[arr1 > 25])"
+        ],
+        "description": "Perform shape, reshape, iteration, join, split, and filtering with NumPy."
+    },
+    "Q61 Pandas Series DataFrame": {
+        "prefix": "q61-pandas-basics",
+        "body": [
+            "import pandas as pd",
+            "",
+            "marks = pd.Series([85, 90, 78, 92, 88])",
+            "print(\"Pandas Series:\")",
+            "print(marks)",
+            "df = pd.DataFrame({",
+            "    \"Name\": [\"Aman\", \"Riya\", \"Rahul\", \"Neha\"],",
+            "    \"Age\": [20, 21, 19, 20],",
+            "    \"Marks\": [85, 90, 78, 92]",
+            "})",
+            "print(\"\\nDataFrame:\\n\", df)",
+            "print(\"\\nFirst Two Rows:\\n\", df.head(2))",
+            "print(\"Shape:\", df.shape)",
+            "print(\"Columns:\", df.columns.tolist())",
+            "print(\"Names:\\n\", df[\"Name\"])",
+            "print(\"Average:\", df[\"Marks\"].mean())",
+            "print(\"Maximum:\", df[\"Marks\"].max())",
+            "print(\"Marks > 80:\\n\", df[df[\"Marks\"] > 80])",
+            "print(\"Sorted:\\n\", df.sort_values(by=\"Marks\", ascending=False))",
+            "df[\"Result\"] = df[\"Marks\"].apply(lambda m: \"Pass\" if m >= 40 else \"Fail\")",
+            "print(\"With Result:\\n\", df)",
+            "print(\"Summary:\\n\", df[\"Marks\"].describe())"
+        ],
+        "description": "Create Pandas Series/DataFrame and perform basic operations."
+    },
+    "Q62 Matplotlib Subplots": {
+        "prefix": "q62-matplotlib-subplots",
+        "body": [
+            "import matplotlib.pyplot as plt",
+            "",
+            "fig, axes = plt.subplots(2, 2, figsize=(10, 7))",
+            "x = [1, 2, 3, 4]",
+            "axes[0, 0].plot(x, [2, 4, 3, 5], marker=\"o\")",
+            "axes[0, 0].set_title(\"Line\")",
+            "axes[0, 1].scatter(x, [5, 2, 4, 1])",
+            "axes[0, 1].set_title(\"Scatter\")",
+            "axes[1, 0].bar([\"A\", \"B\", \"C\", \"D\"], [4, 7, 3, 6])",
+            "axes[1, 0].set_title(\"Bar\")",
+            "axes[1, 1].pie([40, 30, 20, 10], labels=[\"A\", \"B\", \"C\", \"D\"], autopct=\"%1.1f%%\")",
+            "axes[1, 1].set_title(\"Pie\")",
+            "for ax in axes.flat:",
+            "    ax.grid(True) if ax != axes[1, 1] else None",
+            "plt.tight_layout()",
+            "plt.show()"
+        ],
+        "description": "Display line, scatter, bar, and pie charts in subplots."
+    },
+    "Q63 NumPy Array Creation": {
+        "prefix": "q63-numpy-create",
+        "body": [
+            "import numpy as np",
+            "",
+            "print(\"Empty:\", np.empty((2, 2)))",
+            "print(\"Zeros:\\n\", np.zeros((2, 3)))",
+            "print(\"Ones:\\n\", np.ones((2, 3)))",
+            "print(\"Array:\", np.array([1, 2, 3]))",
+            "print(\"Range:\", np.arange(0, 10, 2))"
+        ],
+        "description": "Create arrays using empty, zeros, ones, array, and arange."
+    },
+    "Q64 NumPy Array Properties": {
+        "prefix": "q64-numpy-properties",
+        "body": [
+            "import numpy as np",
+            "",
+            "arr = np.array([[1, 2, 3], [4, 5, 6]])",
+            "print(\"Type:\", type(arr))",
+            "print(\"Shape:\", arr.shape)",
+            "print(\"Dimensions:\", arr.ndim)",
+            "print(\"Size:\", arr.size)",
+            "print(\"Data type:\", arr.dtype)"
+        ],
+        "description": "Display NumPy array properties."
+    },
+    "Q65 NumPy Reshape and Statistics": {
+        "prefix": "q65-numpy-statistics",
+        "body": [
+            "import numpy as np",
+            "",
+            "arr = np.array([2, 4, 6, 8, 10, 12])",
+            "print(\"Reshaped:\\n\", arr.reshape(2, 3))",
+            "print(\"Max:\", arr.max())",
+            "print(\"Min:\", arr.min())",
+            "print(\"Mean:\", arr.mean())",
+            "print(\"Standard deviation:\", arr.std())"
+        ],
+        "description": "Reshape an array and calculate statistics."
+    },
+    "Q66 NumPy Arithmetic": {
+        "prefix": "q66-numpy-arithmetic",
+        "body": [
+            "import numpy as np",
+            "",
+            "a = np.array([10, 20, 30])",
+            "b = np.array([3, 4, 5])",
+            "print(\"Add:\", a + b)",
+            "print(\"Subtract:\", a - b)",
+            "print(\"Multiply:\", a * b)",
+            "print(\"Divide:\", a / b)",
+            "print(\"Floor divide:\", a // b)",
+            "print(\"Modulus:\", a % b)"
+        ],
+        "description": "Perform arithmetic operations on NumPy arrays."
+    },
+    "Q67 NumPy Math Functions": {
+        "prefix": "q67-numpy-math",
+        "body": [
+            "import numpy as np",
+            "",
+            "a = np.array([10, 20, 30])",
+            "b = np.array([1, 2, 3])",
+            "print(np.add(a, b))",
+            "print(np.subtract(a, b))",
+            "print(np.multiply(a, b))",
+            "print(np.divide(a, b))"
+        ],
+        "description": "Use NumPy mathematical functions."
+    },
+    "Q68 NumPy Indexing Slicing": {
+        "prefix": "q68-numpy-slicing",
+        "body": [
+            "import numpy as np",
+            "",
+            "arr = np.array([[10, 20, 30], [40, 50, 60], [70, 80, 90]])",
+            "print(\"Element:\", arr[1, 2])",
+            "print(\"First row:\", arr[0, :])",
+            "print(\"Second column:\", arr[:, 1])",
+            "print(\"Subarray:\\n\", arr[0:2, 1:3])"
+        ],
+        "description": "Demonstrate NumPy indexing and slicing."
+    },
+    "Q69 NumPy Transpose": {
+        "prefix": "q69-numpy-transpose",
+        "body": [
+            "import numpy as np",
+            "",
+            "arr = np.array([[1, 2, 3], [4, 5, 6]])",
+            "print(\"Original:\\n\", arr)",
+            "print(\"Transpose:\\n\", arr.T)"
+        ],
+        "description": "Find the transpose of a matrix."
+    },
+    "Q70 Weighted Marks": {
+        "prefix": "q70-weighted-marks",
+        "body": [
+            "import numpy as np",
+            "",
+            "# Columns: assignment, midterm, end-term",
+            "marks = np.array([[80, 75, 90], [70, 85, 88], [95, 90, 92]])",
+            "weights = np.array([0.2, 0.3, 0.5])",
+            "weighted = marks @ weights",
+            "print(\"Weighted marks:\", weighted)"
+        ],
+        "description": "Calculate weighted marks using NumPy matrix multiplication."
+    },
+    "Q71 Boolean Indexing": {
+        "prefix": "q71-boolean-filter",
+        "body": [
+            "import numpy as np",
+            "",
+            "arr = np.array([12, 25, 30, 41, 50, 63])",
+            "print(\"Greater than 30:\", arr[arr > 30])",
+            "print(\"Even numbers:\", arr[arr % 2 == 0])",
+            "arr[arr < 30] = 0",
+            "print(\"Updated:\", arr)"
+        ],
+        "description": "Filter and update values using Boolean indexing."
+    },
+    "Q72 Row and Column Sums": {
+        "prefix": "q72-row-column-sum",
+        "body": [
+            "import numpy as np",
+            "",
+            "arr = np.array([[1, 2, 3], [4, 5, 6]])",
+            "print(\"Row sums:\", arr.sum(axis=1))",
+            "print(\"Column sums:\", arr.sum(axis=0))"
+        ],
+        "description": "Calculate row-wise and column-wise sums."
+    },
+    "Q73 Load Text Data": {
+        "prefix": "q73-load-text-data",
+        "body": [
+            "import numpy as np",
+            "",
+            "# Example file data.txt contains numeric values separated by whitespace.",
+            "data = np.loadtxt(\"data.txt\")",
+            "print(\"Loaded with loadtxt:\", data)",
+            "",
+            "# genfromtxt can handle missing values in many delimited files.",
+            "data2 = np.genfromtxt(\"data.csv\", delimiter=\",\", skip_header=1)",
+            "print(\"Loaded with genfromtxt:\", data2)"
+        ],
+        "description": "Load numerical data from text or CSV files."
+    },
+    "Q74 Weighted Dataset Concatenation": {
+        "prefix": "q74-weighted-dataset",
+        "body": [
+            "import numpy as np",
+            "",
+            "data = np.array([[80, 75, 90], [70, 85, 88], [95, 90, 92]])",
+            "weights = np.array([0.2, 0.3, 0.5])",
+            "weighted = data @ weights",
+            "combined = np.column_stack((data, weighted))",
+            "print(combined)"
+        ],
+        "description": "Calculate weighted values and append them to the dataset."
+    },
+    "Q75 Pandas Series Access": {
+        "prefix": "q75-pandas-series",
+        "body": [
+            "import pandas as pd",
+            "",
+            "series = pd.Series([85, 90, 78], index=[\"Aman\", \"Riya\", \"Rahul\"])",
+            "print(series)",
+            "print(\"By label:\", series[\"Riya\"])",
+            "print(\"By position:\", series.iloc[0])"
+        ],
+        "description": "Create and access a Pandas Series."
+    },
+    "Q76 Pandas DataFrame": {
+        "prefix": "q76-pandas-dataframe",
+        "body": [
+            "import pandas as pd",
+            "",
+            "df = pd.DataFrame({",
+            "    \"Name\": [\"Aman\", \"Riya\", \"Rahul\"],",
+            "    \"Marks\": [85, 90, 78],",
+            "    \"Age\": [20, 21, 19]",
+            "})",
+            "print(df)"
+        ],
+        "description": "Create a DataFrame from a dictionary."
+    },
+    "Q77 Explore DataFrame": {
+        "prefix": "q77-pandas-explore",
+        "body": [
+            "import pandas as pd",
+            "",
+            "df = pd.DataFrame({\"Name\": [\"Aman\", \"Riya\"], \"Marks\": [85, 90]})",
+            "print(df.head())",
+            "print(df.tail())",
+            "print(\"Shape:\", df.shape)",
+            "print(\"Columns:\", df.columns)",
+            "df.info()",
+            "print(df.describe())"
+        ],
+        "description": "Explore DataFrame properties and summary."
+    },
+    "Q78 Select Rows and Columns": {
+        "prefix": "q78-pandas-selection",
+        "body": [
+            "import pandas as pd",
+            "",
+            "df = pd.DataFrame({\"Name\": [\"Aman\", \"Riya\", \"Rahul\"], \"Marks\": [85, 90, 78]})",
+            "print(df[\"Name\"])",
+            "print(df[[\"Name\", \"Marks\"]])",
+            "print(\"By label:\", df.loc[1, \"Name\"])",
+            "print(\"By position:\", df.iloc[1, 0])"
+        ],
+        "description": "Select DataFrame rows and columns."
+    },
+    "Q79 Filter Pandas DataFrame": {
+        "prefix": "q79-pandas-filter",
+        "body": [
+            "import pandas as pd",
+            "",
+            "df = pd.DataFrame({",
+            "    \"Name\": [\"Aman\", \"Riya\", \"Rahul\", \"Neha\"],",
+            "    \"Marks\": [85, 90, 78, 92],",
+            "    \"Age\": [20, 21, 19, 20]",
+            "})",
+            "result = df[(df[\"Marks\"] > 80) & (df[\"Age\"] < 22)]",
+            "print(result)"
+        ],
+        "description": "Filter DataFrame using multiple conditions."
+    },
+    "Q80 Pandas CSV Read Write": {
+        "prefix": "q80-pandas-csv",
+        "body": [
+            "import pandas as pd",
+            "",
+            "df = pd.read_csv(\"students.csv\", usecols=[\"Name\", \"Marks\"])",
+            "print(df)",
+            "df.to_csv(\"selected_students.csv\", index=False)"
+        ],
+        "description": "Read selected CSV columns and write a DataFrame to CSV."
+    },
+    "Q81 Pandas JSON": {
+        "prefix": "q81-pandas-json",
+        "body": [
+            "import pandas as pd",
+            "from io import StringIO",
+            "",
+            "json_text = '[{\"name\":\"Aman\",\"marks\":85},{\"name\":\"Riya\",\"marks\":90}]'",
+            "df = pd.read_json(StringIO(json_text))",
+            "print(df)"
+        ],
+        "description": "Read JSON data into a Pandas DataFrame."
+    },
+    "Q82 SQLite Create Table": {
+        "prefix": "q82-sqlite-create",
+        "body": [
+            "import sqlite3",
+            "",
+            "with sqlite3.connect(\"students.db\") as conn:",
+            "    conn.execute(\"\"\"CREATE TABLE IF NOT EXISTS students (",
+            "        id INTEGER PRIMARY KEY,",
+            "        name TEXT NOT NULL,",
+            "        marks INTEGER",
+            "    )\"\"\")",
+            "    print(\"Database and table ready.\")"
+        ],
+        "description": "Create an SQLite database and table."
+    },
+    "Q83 SQLite Insert Select": {
+        "prefix": "q83-sqlite-insert-select",
+        "body": [
+            "import sqlite3",
+            "",
+            "with sqlite3.connect(\"students.db\") as conn:",
+            "    conn.execute(\"CREATE TABLE IF NOT EXISTS students (id INTEGER PRIMARY KEY, name TEXT, marks INTEGER)\")",
+            "    conn.execute(\"INSERT OR REPLACE INTO students VALUES (?, ?, ?)\", (1, \"Aman\", 85))",
+            "    print(conn.execute(\"SELECT * FROM students\").fetchall())"
+        ],
+        "description": "Insert and retrieve SQLite records."
+    },
+    "Q84 SQLite Select Columns": {
+        "prefix": "q84-sqlite-select-columns",
+        "body": [
+            "import sqlite3",
+            "",
+            "with sqlite3.connect(\"students.db\") as conn:",
+            "    conn.execute(\"CREATE TABLE IF NOT EXISTS students (id INTEGER, name TEXT, marks INTEGER)\")",
+            "    print(conn.execute(\"SELECT name, marks FROM students\").fetchall())"
+        ],
+        "description": "Select specific columns from SQLite."
+    },
+    "Q85 SQLite Insert Many": {
+        "prefix": "q85-sqlite-many",
+        "body": [
+            "import sqlite3",
+            "",
+            "records = [(1, \"Aman\", 85), (2, \"Riya\", 90), (3, \"Rahul\", 78)]",
+            "with sqlite3.connect(\"students.db\") as conn:",
+            "    conn.execute(\"CREATE TABLE IF NOT EXISTS students (id INTEGER PRIMARY KEY, name TEXT, marks INTEGER)\")",
+            "    conn.executemany(\"INSERT OR REPLACE INTO students VALUES (?, ?, ?)\", records)",
+            "    print(conn.execute(\"SELECT * FROM students\").fetchall())"
+        ],
+        "description": "Insert multiple records using executemany."
+    },
+    "Q86 SQLite WHERE Query": {
+        "prefix": "q86-sqlite-where",
+        "body": [
+            "import sqlite3",
+            "",
+            "branch = input(\"Enter branch: \")",
+            "with sqlite3.connect(\"college.db\") as conn:",
+            "    rows = conn.execute(\"SELECT id, name, branch FROM students WHERE branch = ?\", (branch,)).fetchall()",
+            "    for row in rows:",
+            "        print(row)"
+        ],
+        "description": "Filter records using a parameterized WHERE query."
+    },
+    "Q87 Parameterized SQL Query": {
+        "prefix": "q87-sql-parameters",
+        "body": [
+            "import sqlite3",
+            "",
+            "minimum_marks = int(input(\"Minimum marks: \"))",
+            "with sqlite3.connect(\"students.db\") as conn:",
+            "    rows = conn.execute(\"SELECT id, name, marks FROM students WHERE marks > ?\", (minimum_marks,)).fetchall()",
+            "    print(rows)"
+        ],
+        "description": "Use placeholders in a parameterized SQL query."
+    },
+    "Q88 SQLite Update": {
+        "prefix": "q88-sqlite-update",
+        "body": [
+            "import sqlite3",
+            "",
+            "student_id = int(input(\"Student ID: \"))",
+            "new_marks = int(input(\"New marks: \"))",
+            "with sqlite3.connect(\"students.db\") as conn:",
+            "    cursor = conn.execute(\"UPDATE students SET marks = ? WHERE id = ?\", (new_marks, student_id))",
+            "    print(\"Rows updated:\", cursor.rowcount)"
+        ],
+        "description": "Update a student's marks."
+    },
+    "Q89 SQLite Delete": {
+        "prefix": "q89-sqlite-delete",
+        "body": [
+            "import sqlite3",
+            "",
+            "student_id = int(input(\"Student ID to delete: \"))",
+            "with sqlite3.connect(\"students.db\") as conn:",
+            "    cursor = conn.execute(\"DELETE FROM students WHERE id = ?\", (student_id,))",
+            "    print(\"Rows deleted:\", cursor.rowcount)"
+        ],
+        "description": "Delete a student record."
+    },
+    "Q90 HTTP GET Request": {
+        "prefix": "q90-http-get",
+        "body": [
+            "import requests",
+            "",
+            "response = requests.get(\"https://jsonplaceholder.typicode.com/posts/1\", timeout=15)",
+            "response.raise_for_status()",
+            "print(\"Status:\", response.status_code)",
+            "print(\"JSON:\", response.json())"
+        ],
+        "description": "Send an HTTP GET request."
+    },
+    "Q91 HTTP POST Request": {
+        "prefix": "q91-http-post",
+        "body": [
+            "import requests",
+            "",
+            "payload = {\"title\": \"Python\", \"body\": \"POST request example\", \"userId\": 1}",
+            "response = requests.post(\"https://jsonplaceholder.typicode.com/posts\", json=payload, timeout=15)",
+            "print(\"Status:\", response.status_code)",
+            "print(\"Response:\", response.json())"
+        ],
+        "description": "Send an HTTP POST request with JSON."
+    },
+    "Q92 HTTP Query Parameters": {
+        "prefix": "q92-http-params",
+        "body": [
+            "import requests",
+            "",
+            "response = requests.get(",
+            "    \"https://jsonplaceholder.typicode.com/comments\",",
+            "    params={\"postId\": 1},",
+            "    timeout=15",
+            ")",
+            "response.raise_for_status()",
+            "print(\"URL:\", response.url)",
+            "print(\"Results:\", response.json())"
+        ],
+        "description": "Send query parameters in a GET request."
+    },
+    "Q93 Create DataFrame from Dictionary": {
+        "prefix": "q93-dataframe-dict",
+        "body": [
+            "import pandas as pd",
+            "",
+            "data = {",
+            "    \"Name\": [\"Aman\", \"Riya\", \"Rahul\"],",
+            "    \"Marks\": [85, 90, 78]",
+            "}",
+            "df = pd.DataFrame(data)",
+            "print(df)",
+            "print(\"Average marks:\", df[\"Marks\"].mean())"
+        ],
+        "description": "Create and summarize a DataFrame from a dictionary."
+    }
+}
